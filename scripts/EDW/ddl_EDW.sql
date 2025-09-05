@@ -1,3 +1,14 @@
+/*
+===================================================================
+DDL Script: Create EDW Tables
+===================================================================
+Script Purpose
+	This script creates tables in the 'EDW' schema, dropping existing tables
+	if they already exist.
+	Run this scirpt to re-define the DDL structure of 'stage' Tables
+===================================================================
+*/
+
 USE DataWarehouse;
 
 IF OBJECT_ID('EDW.crm_cust_info', 'U') IS NOT NULL
