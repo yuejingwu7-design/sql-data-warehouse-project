@@ -65,6 +65,8 @@ go
 -- ======================================================================================
 IF OBJECT_ID('data_marts.dim_products', 'V') IS NOT NULL
 	DROP VIEW data_marts.dim_products;
+go
+	
 CREATE VIEW data_marts.dim_products as
 SELECT
 	ROW_NUMBER() OVER (ORDER BY pn.prd_start_dt, pn.prd_key) as product_key,
@@ -95,6 +97,8 @@ go
 --Building Fact: Use the dimension's surrogate keys instead of IDs to easily connect facts with dimensions
 IF OBJECT_ID('data_marts.fact_sales', 'V') IS NOT NULL
 	DROP VIEW data_marts.fact_sales;
+go
+	
 CREATE VIEW data_marts.fact_sales as
 SELECT
 cd.sls_ord_num as order_number,
