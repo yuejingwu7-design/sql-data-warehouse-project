@@ -2,7 +2,7 @@
 
 The Data Marts Layer is the business-level data representation, structured to support analytical and reporting use cases. It consists of dimension tables and fact tables for specific business metrics.
 
-## 1. gold.dim_customers
+## 1. data_marts.dim_customers
 
 - Purpose: Stores customer details enriched with demographic and geographic data.
 - Columns:
@@ -20,7 +20,7 @@ The Data Marts Layer is the business-level data representation, structured to su
 | birthdate | DATE | The date of birth of the customer, formatted as YYYY-MM-DD (e.g., 1971-10-06) |
 | create | DATE | The date and time when the customer record was created in the system. |
 
-## 2. gold.dim_products
+## 2. data_marts.dim_products
 
 - Purpose: Provide information about the products and their attributes.
 - Columns:
@@ -39,7 +39,7 @@ The Data Marts Layer is the business-level data representation, structured to su
 | product_line | NVARCHAR(50) | The specific product line or series to which the product belongs (e.g., Road, Montain) |
 | start_date | DATE | The date when the product became available for sale or use. |
 
-## 3. gold.fact_sales
+## 3. data_marts.fact_sales
 
 - Purpose: Stores transactional sales data for analytical purposes.
 - Columns:
