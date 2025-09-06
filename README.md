@@ -1,10 +1,25 @@
-# sql-data-warehouse-project
+# Data Warehouse and ETL Project
 
-欢迎来到 **sql-data-warehouse-project** 目录！🚀
+欢迎来到 **Data Warehouse and ETL Project** 目录！🚀
 这个项目描述了一个综合的数据仓库和分析解决方案，从建设一个数据仓库用于生成可执行的洞见。设计一个组合型项目以聚焦于行业最佳的数据工程与分析实践。
 
 ---
+## 📕 项目概览
 
+这个项目包含：
+  1. 数据架构：设计一个现代化的数据仓库，利用Inmon/Medallion架构：Stage（Bronze）层, Enterprise Data Warehouse (EDW, Silver)层, 和 Data Marts (Gold)层。
+  2. ETL流程化：提取（E）,转化（T）,加载（L）,从数据源系统到数据仓库各层。
+  3. 数据建模：开发数据事实模型与维度模型，最优化以用于分析请求。
+  4. 分析&报告：创建基于SQL的报告、仪表盘，用于可执行洞见表达。
+## 🥼 这个项目是一份对下面类型的专家或学生的具有参考性的优秀目录：
+- SQL 开发者
+- 数据架构师
+- 数据工程者
+- ETL 流程开发者
+- 数据建模师
+- 数据分析师
+
+---
 ## 🚀 项目要求
 
 ### 建立数据仓库（数据工程）
