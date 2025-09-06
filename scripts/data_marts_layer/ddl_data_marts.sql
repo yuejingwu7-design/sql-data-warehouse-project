@@ -20,6 +20,8 @@ Usage:
 --and add sorrogate key
 IF OBJECT_ID('data_marts.dim_customers', 'V') IS NOT NULL
 	DROP VIEW data_marts.dim_customers;
+go
+	
 CREATE VIEW data_marts.dim_customers as
 SELECT
 	ROW_NUMBER() over (order by cst_id) as customer_key,
@@ -39,7 +41,8 @@ left join EDW.erp_cust_az12 ca
 on ci.cst_key = ca.cid
 left join EDW.erp_loc_a101 la
 on ci.cst_key = la.cid
-
+go
+	
 --Integration for gender
 SELECT distinct
 	ci.cst_gndr,
@@ -79,7 +82,8 @@ from EDW.crm_prd_info pn
 LEFT JOIN EDW.erp_px_cat_g1v2 pc
 on pn.cat_id = pc.id
 where prd_end_dt IS NULL -- Filter out all the historical dara
-
+go
+	
 select * from data_marts.dim_products
 where product_key is null
 go
@@ -108,6 +112,7 @@ LEFT JOIN data_marts.dim_products pr
 on cd.sls_prd_key = pr.product_number
 LEFT JOIN data_marts.dim_customers cu
 on cd.sls_cust_id = cu.customer_id
+go
 
 -- Foreign key integrity （Dimensions） 
 select * 
